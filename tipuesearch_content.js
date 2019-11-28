@@ -1,0 +1,1 @@
+var tipuesearch = {"pages":[{"title":"About Nabin Bhattarai","text":"Test about page","tags":"blog","url":"http://localhost:8000/2019/about-nabin-bhattarai.html","loc":"http://localhost:8000/2019/about-nabin-bhattarai.html"}]};
