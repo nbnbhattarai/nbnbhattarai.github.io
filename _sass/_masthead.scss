@@ -1,0 +1,57 @@
+// Masthead
+//
+// Super small header above the content for site name and short description.
+
+.masthead {
+  display: flex;
+  // flex: 1;
+  align-items: center;
+  flex-direction: row;
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.masthead-title {
+  display: flex;
+  // flex: 0.4;
+  flex-grow: 1;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $gray-4;
+  a {
+    color: inherit;
+  }
+
+  small {
+    font-size: 50%;
+    font-weight: 400;
+    opacity: .5;
+  }
+}
+
+.masthead-menu {
+  display: flex;
+  flex: 0.6;
+  flex-direction: column;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: $gray-4;
+  align-items: flex-end;
+
+  .menu-list {
+    display: flex;
+    flex-direction: row;
+
+    a {
+      color: inherit;
+      margin-left: 1rem;
+    }
+
+    a.active {
+      border-bottom: 3px solid $gray-4;
+      margin-left: 1rem;
+    }
+  }
+}

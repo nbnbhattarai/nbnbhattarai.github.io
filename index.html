@@ -1,146 +1,37 @@
-<!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
-<head>
-  <meta charset="UTF-8" />
-  <title> | Nabin Bhattarai</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
-  <link rel="stylesheet" href="https://nbnbhattarai.github.io/static/m-dark.css" />
-  <link rel="stylesheet" href="https://nbnbhattarai.github.io/static/css/custom.css" />
-  <link rel="icon" href="https://nbnbhattarai.github.io/favicon.ico" type="image/x-ico" />
-  <link rel="canonical" href="https://nbnbhattarai.github.io/" />
-  <link href="https://nbnbhattarai.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Nabin Bhattarai" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#22272e" />
-  <meta property="og:site_name" content="Nabin Bhattarai" />
-  <meta property="og:title" content="" />
-  <meta name="twitter:title" content="" />
-  <meta property="og:url" content="https://nbnbhattarai.github.io/" />
-  <meta name="twitter:card" content="summary" />
-  <meta property="og:type" content="page" />
-</head>
-<body>
-<header><nav id="navigation">
-  <div class="m-container">
-    <div class="m-row">
-      <a href="https://nbnbhattarai.github.io/" id="m-navbar-brand" class="m-col-t-9 m-col-m-none m-left-m">Nabin Bhattarai</a>
-      <a id="m-navbar-show" href="#navigation" title="Show navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
-      <a id="m-navbar-hide" href="#" title="Hide navigation" class="m-col-t-3 m-hide-m m-text-right"></a>
-      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
-        <div class="m-row">
-          <ol class="m-col-t-6 m-col-m-none">
-          </ol>
-          <ol class="m-col-t-6 m-col-m-none" start="1">
-            <li><a href="https://nbnbhattarai.github.io/blog/">Blog</a></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</nav></header>
-<main>
-<article>
-  <div id="m-landing-image">
-    <div id="m-landing-cover">
-      <div class="m-container">
-<!-- landing -->
-<div class="m-row">
-<div class="m-col-l-4 m-col-m-3 m-push-l-1 m-push-m1">
-<img class="m-image" src="https://nbnbhattarai.github.io/static/img/profile.png" style="width: 1800px" />
-</div>
-<div class="m-col-l-6 m-col-m-6 m-push-l-1 m-push-m-1">
-<span style="font-size: 2.8rem; font-weight: bold;">Nabin Bhattarai</span>
+---
+layout: default
+title: Home
+---
 
-<h4 style="">Machine Learning Engineer, <a href="https://fusemachines.com">Fusemachines Nepal</a></h4>
-
-<h4>Address: </h4>
-<ul style="list-style: none">
-    <li>Maitidevi</li>
-    <li>Kathmandu, Nepal</li>
-</ul>
-
-<h4>Email: </h4>
-<ul style="list-style:none">
-    <li>Personal: <img src="/static/img/email_personal.png"></li>
-    <li>Professional: <img src="/static/img/email_professional.png"></li>
-</ul>
-
-<span>My research interests are but not limited to:</span><br>
-
-<ul style="margin-top: 10px">
-    <li>Artificial Intelligence/Machine Learning</li>
-    <li>Stocastic Computation</li>
-    <li>Quantum Computing</li>
-</ul>
-
-<a href="/static/files/cv.pdf">Download CV</a></div>
+<div class="posts">
+  {% if paginator.posts %}
+    {% for post in paginator.posts %}
+    <article class="post">
+      <h2 class="post-title">
+        <a href="{{ post.url | absolute_url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+  
+      <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date_to_string }}</time>
+  
+      {{ post.excerpt }}
+    </article>
+    {% endfor %}
+  {% else %}
+    <div class="message">Coming soon!</div>
+  {% endif %}
 </div>
-<div class="row">
-<div class="m-col-l-6 m-col-m-6">
-<p><strong>Education</strong></p>
-<ul>
-<li><p>
-<strong>Institute of Engineering, Pulchowk Campus</strong>  (2013 - 2017)<br />
-Bachelor in Computer Engineering<br />
-</p>
-</li>
-<li><p>
-<strong>Himalayan WhiteHouse International College</strong> (2011 - 2013)<br />
-Higher Secondary Education Board<br />
-</p>
-</li>
-</ul>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    <a class="pagination-item newer" href="{{ paginator.previous_page_path | prepend: absolute_url }}">Newer</a>
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
 </div>
-<div class="m-col-l-6 m-col-m-6">
-<p><strong>Experience</strong></p>
-<ul>
-<li><p>
-<strong>Fusemachines Nepal</strong> (December, 2019 - Present)<br />
-Machine Learning Engineer<br />
-</p>
-</li>
-<li><p>
-<strong>Impact Lab and Innovation</strong> (January, 2018 - November, 2019.)<br />
-R&amp;D Engineer<br />
-</p>
-</li>
-<li><p>
-<strong>Big O Infotech</strong> (April, 2019 - August, 2019)<br />
-Software Engineer<br />
-</p>
-</li>
-<li><p>
-<strong>IT Training Nepal</strong> (July, 2018 -- December, 2018)<br />
-Tutor (Python, Data Science and Analytics)<br />
-</p>
-</li>
-<li><p>
-<strong>UNICEF Nepal</strong> (January, 2015 -- April, 2015)<br />
-RapidPro Developer<br />
-</p>
-</li>
-</ul>
-</div>
-</div>
-<!-- /landing -->
-      </div>
-    </div>
-  </div>
-  <div class="m-container m-container-inflatable">
-    <div class="m-row">
-      <div class="m-col-l-10 m-push-l-1">
-      </div>
-    </div>
-  </div>
-</article>
-<div class="m-container m-container-inflatable">
-  <div class="m-row">
-    <div class="m-col-l-10 m-push-l-1 m-nopadt">
-<!-- footer -->
-<p>©2020 - Nabin Bhattarai</p>
-<!-- /footer -->
-    </div>
-  </div>
-</div>
-</main>
-</body>
-</html>

@@ -1,0 +1,31 @@
+# Setup
+title: Nabin's blog
+tagline: Wonders of my sleepless nights
+url: https://nbnbhattarai.github.io
+paginate: 3
+baseurl: ""
+permalink: pretty
+
+# Gems
+plugins:
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-seo-tag
+
+# Optimize Jekyll
+exclude:
+  - .git
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+
+# Replace this value and uncomment to enable Google Analytics tracking
+ga_analytics: 'UA-162826338-1'
+
+# Specify the author for blog posts
+author:
+  name: Nabin Bhattarai
+  email: nbn.bhattarai99@gmail.com
+  twitter: https://twitter.com/nabin_xinus
+  github: https://github.com/nbnbhattarai

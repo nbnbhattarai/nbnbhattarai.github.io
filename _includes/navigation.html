@@ -1,0 +1,13 @@
+<header class="masthead">
+  <h1 class="masthead-title">
+    <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+    <small>{{ site.tagline|lowercase }}</small>
+  </h1>
+  <div class="masthead-menu">
+    <div class="menu-list">
+    {% for menu in site.data.navigation %}
+      <a href="{{ menu.url }}" {% if page.url == menu.url %}class="active"{% endif %}>{{ menu.title }}</a>
+    {% endfor %}
+    </div>
+  </div>
+</header>
