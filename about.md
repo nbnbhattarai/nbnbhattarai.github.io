@@ -42,4 +42,4 @@ __Experiences:__
 + __UNICEF Nepal__ _(January, 2015 - April, 2015)_  
 	RapidPro Developer / Technology Consultant
 
-Download my resume from [here](/assets/files/resume.pdf)
+Download my resume from [here](https://drive.google.com/file/d/1zLydX1m9i-HylIa_OdJ-_RgK2R3VGXQl/view?usp=sharing)
