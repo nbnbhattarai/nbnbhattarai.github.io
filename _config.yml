@@ -1,7 +1,7 @@
 # Setup
 title: Nabin's blog
 tagline: Wonders of my sleepless nights
-url: https://nbnbhattarai.github.io
+url: https://nabinbhattarai.com
 paginate: 3
 baseurl: ""
 permalink: pretty
@@ -21,7 +21,7 @@ exclude:
   - README.md
 
 # Replace this value and uncomment to enable Google Analytics tracking
-ga_analytics: 'UA-162826338-1'
+ga_analytics: "UA-162826338-1"
 
 # Specify the author for blog posts
 author:
